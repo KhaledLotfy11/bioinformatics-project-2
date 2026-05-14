@@ -1,28 +1,12 @@
 # Bioinformatics Pipeline Project
 
-## Project Overview
-
-This project implements a complete Bioinformatics pipeline for FASTQ processing, quality control, feature extraction, K-mer analysis, and machine learning classification.
-
-The workflow was developed using Python, Docker, and standard Bioinformatics tools to analyze sequencing data and generate machine learning-ready features.
-
----
-
-# Workflow Summary
-
-The pipeline includes:
-
-1. Data Acquisition & Project Setup
-2. FASTQ Parsing & Quality Control
-3. Dockerized FastQC & Fastp Pipeline
-4. Feature Extraction & K-mer Analysis
-5. Machine Learning Classification
+A complete bioinformatics workflow for FASTQ quality control, trimming, feature extraction, K-mer analysis, and machine learning classification using Python and Dockerized bioinformatics tools.
 
 ---
 
 # Project Structure
 
-```bash
+```text
 bioinformatics_project/
 │
 ├── data/
@@ -46,158 +30,183 @@ bioinformatics_project/
 │
 ├── requirements.txt
 └── README.md
-_____________________
-Technologies & Tools
-Programming & Libraries
-Python
-Biopython
-Pandas
-Scikit-learn
-Bioinformatics Tools
-FastQC
-Fastp
-MultiQC
-Containerization
-Docker
-____________________
-Phase 1 — Data Acquisition & Project Setup
-Completed Tasks
-Created project directory structure
-Created Python virtual environment
-Installed required packages
-Downloaded FASTQ datasets from SRA Toolkit
-Generated requirements.txt
-Deliverables
-Structured project folders
-FASTQ files
-requirements.txt
-____________________
-Phase 2 — FASTQ Parsing & Quality Control
-FASTQ Parsing
+```
+
+---
+
+# Technologies & Tools
+
+## Programming & Libraries
+- Python
+- Biopython
+- Pandas
+- Scikit-learn
+
+## Bioinformatics Tools
+- FastQC
+- Fastp
+- MultiQC
+
+## Containerization
+- Docker
+
+---
+
+# Phase 1 — Data Acquisition & Project Setup
+
+## Completed Tasks
+- Created project directory structure
+- Created Python virtual environment
+- Installed required packages
+- Downloaded FASTQ datasets using SRA Toolkit
+- Generated requirements.txt
+
+## Deliverables
+- Structured project folders
+- FASTQ files
+- requirements.txt
+
+---
+
+# Phase 2 — FASTQ Parsing & Quality Control
+
+## FASTQ Parsing
 
 Implemented a custom FASTQ parser using Biopython to extract:
 
-Read IDs
-DNA sequences
-Quality scores
-Quality Control Metrics
+- Read IDs
+- DNA sequences
+- Quality scores
+
+## Quality Control Metrics
 
 Calculated:
 
-Total Reads
-Average Read Length
-Average Quality Score
-GC Content Percentage
-Q20 Percentage
-Q30 Percentage
-Per-base Quality
-Output
+- Total Reads
+- Average Read Length
+- Average Quality Score
+- GC Content Percentage
+- Q20 Percentage
+- Q30 Percentage
+- Per-base Quality
 
-Generated:
+## Generated Output
+- qc_report.txt
 
-qc_report.txt
-____________________
-Phase 3 — Dockerized QC & Trimming Pipeline
-FastQC
+---
+
+# Phase 3 — Dockerized QC & Trimming Pipeline
+
+## FastQC Analysis
 
 Executed FastQC on:
 
-Raw FASTQ files
-Trimmed FASTQ files
-Fastp
+- Raw FASTQ files
+- Trimmed FASTQ files
+
+## Fastp Processing
 
 Performed:
 
-Adapter trimming
-Low-quality filtering
-Read cleaning
+- Adapter trimming
+- Low-quality filtering
+- Read cleaning
 
-Generated:
+## MultiQC Aggregation
 
-HTML report
-JSON report
-MultiQC
+Combined all QC reports into a single summary report.
 
-Aggregated all QC reports into a single report.
+## Generated Output Files
 
-Output Files
+- FastQC reports
+- Fastp HTML reports
+- Fastp JSON reports
+- MultiQC report
 
-Generated:
+---
 
-FastQC reports
-Fastp reports
-MultiQC report
-____________________
-Phase 4 — Feature Extraction & K-mer Analysis
-Feature Extraction
+# Phase 4 — Feature Extraction & K-mer Analysis
 
-Extracted:
+## Feature Extraction
 
-Read length
-GC content
-Average quality
+Extracted sequence-based features including:
 
-Generated:
+- Read Length
+- GC Content
+- Average Quality
 
-features.csv
-____________________
-K-mer Frequency Extraction
+## Generated File
+- features.csv
+
+---
+
+# K-mer Frequency Extraction
 
 Implemented:
 
-3-mer extraction
-K-mer frequency counting
-Noise filtering by excluding K-mers containing N
+- 3-mer extraction
+- K-mer frequency counting
+- Noise filtering by excluding K-mers containing N
 
-Generated:
+## Example K-mers
+- ATG
+- GCT
+- TGA
+- CGA
 
-kmer_features.csv
+## Generated File
+- kmer_features.csv
 
-Example K-mers:
+These features were used for downstream machine learning analysis.
 
-ATG
-GCT
-TGA
-CGA
+---
 
-These features are useful for downstream machine learning analysis.
-____________________
-Phase 5 — Machine Learning Classification
-Model Used
-Random Forest Classifier
-Workflow
-Loaded K-mer features
-Split dataset into training/testing sets
-Trained ML model
-Evaluated performance
-Evaluation Metrics
-Accuracy
-Precision
-Recall
-F1-score
-Final Accuracy
+# Phase 5 — Machine Learning Classification
+
+## Model Used
+- Random Forest Classifier
+
+## Workflow
+- Loaded K-mer feature dataset
+- Split dataset into training/testing sets
+- Trained machine learning model
+- Evaluated classification performance
+
+## Evaluation Metrics
+- Accuracy
+- Precision
+- Recall
+- F1-score
+
+## Final Accuracy
+```text
 73%
-____________________
-Results Summary
-Task	                      Status
-FASTQ Parsing	             Completed
-Quality Control	           Completed
-FastQC	                   Completed
-Fastp Trimming	           Completed
-MultiQC	                   Completed
-Feature Extraction	       Completed
-K-mer Extraction	         Completed
-Machine Learning Model	   Completed
-____________________
-Author
-Khaled Lotfy
-ID: 4221168
-___
-AbdulRahman Mahjoub
-ID: 4231010
-___
-Mohamed Hazem
-ID: 421206
+```
+
+---
+
+# Results Summary
+
+| Task | Status |
+|------|------|
+| FASTQ Parsing | Completed |
+| Quality Control | Completed |
+| FastQC | Completed |
+| Fastp Trimming | Completed |
+| MultiQC | Completed |
+| Feature Extraction | Completed |
+| K-mer Extraction | Completed |
+| Machine Learning Model | Completed |
+
+---
+
+# Authors
+
+- Khaled Lotfy — ID: 4221168
+- AbdulRahman Mahjoub — ID: 4231010
+- Mohamed Hazem — ID: 421206
+- Abdallah Sameh — ID: 4221079
+
 ___
 Abdallah Sameh
 ID: 4221079
