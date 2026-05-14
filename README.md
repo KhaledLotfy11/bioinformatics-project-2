@@ -206,7 +206,3 @@ These features were used for downstream machine learning analysis.
 - AbdulRahman Mahjoub — ID: 4231010
 - Mohamed Hazem — ID: 421206
 - Abdallah Sameh — ID: 4221079
-
-___
-Abdallah Sameh
-ID: 4221079
